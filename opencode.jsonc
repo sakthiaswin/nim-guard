@@ -1,0 +1,145 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "D:/ponytail/ponytail/.opencode/plugins/ponytail.mjs"
+  ],
+  "provider": {
+    "nimguard": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "NIM via nim-guard",
+      "options": {
+        "baseURL": "http://127.0.0.1:8788/v1"
+      },
+      "models": {
+
+        // ── DeepSeek ──────────────────────────────────────────────────────────
+        "deepseek-ai/deepseek-v4-pro": {
+          "name": "DeepSeek V4 Pro (1M ctx, coding)"
+        },
+        "deepseek-ai/deepseek-v4-flash": {
+          "name": "DeepSeek V4 Flash (fast, 1M ctx)"
+        },
+        "deepseek-ai/deepseek-r1": {
+          "name": "DeepSeek R1 (671B, reasoning)"
+        },
+
+        // ── Kimi (Moonshot AI) ────────────────────────────────────────────────
+        "moonshotai/kimi-k2.6": {
+          "name": "Kimi K2.6 (1T MoE, agentic coding)"
+        },
+
+        // ── GLM (Z.ai) ────────────────────────────────────────────────────────
+        "z-ai/glm-5.1": {
+          "name": "GLM-5.1 (754B, agentic coding)"
+        },
+
+        // ── Nemotron (NVIDIA) ─────────────────────────────────────────────────
+        "nvidia/llama-3.1-nemotron-70b-instruct": {
+          "name": "Nemotron 70B (tool calling, reasoning)"
+        },
+        "nvidia/llama-3.1-nemotron-nano-8b-v1": {
+          "name": "Nemotron Nano 8B (fast, on-device)"
+        },
+        "nvidia/llama-3_3-nemotron-super-49b-v1": {
+          "name": "Nemotron Super 49B (flagship reasoning)"
+        },
+        "nvidia/nemotron-mini-4b-instruct": {
+          "name": "Nemotron Mini 4B (lightweight)"
+        },
+
+        // ── Llama (Meta) ──────────────────────────────────────────────────────
+        "meta/llama-4-maverick-17b-128e-instruct": {
+          "name": "Llama 4 Maverick (multimodal, 22M uses)"
+        },
+        "meta/llama-4-scout-17b-16e-instruct": {
+          "name": "Llama 4 Scout (efficient, multimodal)"
+        },
+        "meta/llama-3.3-70b-instruct": {
+          "name": "Llama 3.3 70B (strong coding)"
+        },
+        "meta/llama-3.1-405b-instruct": {
+          "name": "Llama 3.1 405B (largest Llama)"
+        },
+        "meta/llama-3.1-70b-instruct": {
+          "name": "Llama 3.1 70B (tool calling)"
+        },
+        "meta/llama-3.1-8b-instruct": {
+          "name": "Llama 3.1 8B (fast, low cost)"
+        },
+        "meta/llama-3.2-3b-instruct": {
+          "name": "Llama 3.2 3B (edge, fast)"
+        },
+        "meta/llama-3.2-1b-instruct": {
+          "name": "Llama 3.2 1B (lightest Llama)"
+        },
+
+        // ── Mistral ───────────────────────────────────────────────────────────
+        "mistralai/mistral-nemotron": {
+          "name": "Mistral Nemotron (best function calling)"
+        },
+        "mistralai/mistral-large-2-instruct": {
+          "name": "Mistral Large 2 (general, 128K ctx)"
+        },
+        "mistralai/mixtral-8x22b-instruct-v0.1": {
+          "name": "Mixtral 8x22B (MoE, tool calling)"
+        },
+        "mistralai/mixtral-8x7b-instruct-v0.1": {
+          "name": "Mixtral 8x7B (fast MoE)"
+        },
+        "mistralai/mistral-7b-instruct-v0.3": {
+          "name": "Mistral 7B (smallest Mistral)"
+        },
+
+        // ── MiniMax ───────────────────────────────────────────────────────────
+        "minimaxai/minimax-m2.7": {
+          "name": "MiniMax M2.7 (230B, top coding)"
+        },
+
+        // ── Stepfun ───────────────────────────────────────────────────────────
+        "stepfun-ai/step-3.5-flash": {
+          "name": "Step-3.5 Flash (200B MoE, agentic)"
+        },
+
+        // ── Google Gemma ──────────────────────────────────────────────────────
+        "google/gemma-3-27b-it": {
+          "name": "Gemma 3 27B (Google, reasoning)"
+        },
+        "google/gemma-3-12b-it": {
+          "name": "Gemma 3 12B (balanced)"
+        },
+        "google/gemma-3n-e4b-it": {
+          "name": "Gemma 3n E4B (edge, multimodal)"
+        },
+        "google/gemma-3n-e2b-it": {
+          "name": "Gemma 3n E2B (lightest Gemma)"
+        },
+
+        // ── Microsoft Phi ─────────────────────────────────────────────────────
+        "microsoft/phi-4": {
+          "name": "Phi-4 (14B, strong reasoning)"
+        },
+        "microsoft/phi-4-mini-instruct": {
+          "name": "Phi-4 Mini (compact, fast)"
+        },
+        "microsoft/phi-3-mini-128k-instruct": {
+          "name": "Phi-3 Mini 128K (edge, long ctx)"
+        },
+        "microsoft/phi-3-medium-128k-instruct": {
+          "name": "Phi-3 Medium 128K"
+        },
+        "microsoft/phi-3-small-128k-instruct": {
+          "name": "Phi-3 Small 128K"
+        },
+
+        // ── ByteDance Seed ────────────────────────────────────────────────────
+        "bytedance/seed-oss-36b": {
+          "name": "Seed-OSS 36B (ByteDance)"
+        }
+
+      }
+    }
+  },
+
+  // Default model — change to whichever you prefer
+  "model": "nimguard/deepseek-ai/deepseek-v4-flash"
+}

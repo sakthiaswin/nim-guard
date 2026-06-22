@@ -1,0 +1,31 @@
+{
+  "name": "nim-guard",
+  "version": "1.0.0",
+  "description": "Drop-in OpenAI-compatible proxy that enforces NVIDIA NIM free-tier RPM/TPM limits via queue-and-wait rate limiting, with built-in payload compression to reduce token pressure. Built for opencode (and any OpenAI-compatible client) where a single coding task can fan out into many API calls across the main agent and subagents.",
+  "type": "module",
+  "main": "src/server.js",
+  "bin": {
+    "nim-guard": "src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  },
+  "keywords": [
+    "nvidia-nim",
+    "rate-limit",
+    "proxy",
+    "opencode",
+    "llm",
+    "rpm",
+    "tpm",
+    "openai-compatible"
+  ]
+}
